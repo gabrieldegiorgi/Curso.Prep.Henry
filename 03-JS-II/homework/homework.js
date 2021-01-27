@@ -36,7 +36,7 @@ function conection(status) {
     return("Online");
   } else if ((status === 2)) {
     return("Away");
-  } else "Offline";
+  } else return"Offline";
 }
 
 function saludo(idioma) {
@@ -65,10 +65,7 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
 
-  switch (color) {
-
-
-    switch(color) {
+   switch(color) {
       case "blue":
         return "This is blue";
       case "red": 
@@ -80,10 +77,6 @@ function colors(color) {
       default: 
       return "Color not found";
     }
-
-
-
-  }
 }
 
 function esDiezOCinco(numero) {
@@ -167,9 +160,10 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  for (i = 1; i < numero; i++) {
+  for (var i = 2; i < numero; i++) {
     if (numero % i === 0) return false;
   }
+
   if (numero > 1) {
     return true;
   } else {
@@ -196,11 +190,11 @@ function tablaDelSeis(num) {
 
   tablaDel6 = [];
 
-  for (i = 0; i <= 10; i++) {
-    tablaDel6[i] = num * i;
+  let arrayTablaDel6 = []
+  for (let i = 0; i < 11; i++) {
+        arrayTablaDel6.push(6 * i)
   }
-  return tablaDel6;
-}
+  return arrayTablaDel6}
 
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
